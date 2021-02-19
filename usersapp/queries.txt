@@ -1,0 +1,26 @@
+User.objects.create(fname="Blake", lname="Hughes", email="blake.hughes77@yahoo.com", age="25", created_at = "2020-07-10", updated_at = "2021-02-18")
+
+
+User.objects.create(fname="Savannah", lname="Grant", email="sgrant@gmail.com", age="22", created_at = "2020-07-10", updated_at = "2021-02-18")
+
+
+User.objects.create(fname="Sam", lname="Verbus", email="sverbus@gmail.com", age="49", created_at = "2020-07-10", updated_at = "2021-02-18")
+
+
+retrieve all users
+
+User.objects.all()
+
+User.objects.first() - gets the first record in the table
+User.objects.last() - gets the last record in the table
+
+updates = User.objects.get(id=3)
+updates.lname = "Carl"
+updates.save()
+
+deleting = User.objects.get(id=2)
+deleting.delete()
+
+User.objects.all().order_by("fname")
+
+User.objects.all().order_by("-fname")
